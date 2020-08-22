@@ -39,8 +39,8 @@ if (process.platform === "win32") {
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1024, // width of the window
-    height: 768, // height of the window
+    width: 2000, // width of the window
+    height: 1300, // height of the window
     show: false, // don't show until window is ready
     webPreferences: {
       nodeIntegration: true,
@@ -79,6 +79,7 @@ function createWindow() {
       installExtension(REACT_DEVELOPER_TOOLS).catch((err) =>
         console.log("Error loading React DevTools: ", err)
       );
+      mainWindow.maximize();
       mainWindow.webContents.openDevTools();
     }
   });

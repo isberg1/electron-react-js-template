@@ -17,7 +17,7 @@ module.exports = {
         include: defaultInclude,
       },
       {
-        test: /\.jsx?$/,
+        test: /\.(jsx?|tsx?)$/,
         use: [{ loader: "babel-loader" }],
         include: defaultInclude,
       },
@@ -32,6 +32,9 @@ module.exports = {
         include: defaultInclude,
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   target: "electron-renderer",
   plugins: [

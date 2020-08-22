@@ -5,10 +5,10 @@ import React from "react";
 import { render } from "react-dom";
 
 // Import main App component
-import App from "./components/app.jsx";
+import App from "./components/app.tsx";
 
 // Import CSS stylesheet
-import "./assets/css/app.css";
+import "./components/app.css";
 
 // Since we are using HtmlWebpackPlugin WITHOUT a template, we should create our own root node in the body element before rendering into it
 let root = document.createElement("div");
